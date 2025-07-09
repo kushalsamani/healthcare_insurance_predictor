@@ -2,7 +2,7 @@
 
 
 **Live App:** (https://healthcareinsurancepredictor.streamlit.app/)  
-**Note:** Predicted premium values are displayed in **INR (Indian Rupees)**
+
 
 This project is a machine learning pipeline and Streamlit web app designed to predict the **Annual Healthcare Insurance Premium** for individuals based on demographic and health-related risk factors. The system uses an age-based segmentation approach with two distinct models to improve accuracy and handle data imbalance.
 
@@ -136,7 +136,7 @@ streamlit run app/main.py
 
 - This project demonstrates the use of **segmented modeling**, **feature-based enrichment**, and **modular deployment** for real-world ML workflows.
 
-- **This app is deployed and live on:** (https://healthcareinsurancepredictor.streamlit.app/)  
+- Predicted premium values are displayed in **INR (Indian Rupees)**
 
 
 
