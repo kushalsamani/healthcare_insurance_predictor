@@ -17,7 +17,4 @@ venv/
 .DS_Store
 Thumbs.db
 
-# Data/model artifacts (optional if you're sharing)
-*.joblib
-*.pkl
-*.db
+
