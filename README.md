@@ -16,7 +16,7 @@ This project is a machine learning pipeline and Streamlit web app designed to pr
 
 
 
-An insurance client requested a system that could predict a customer's annual premium based on available input features such as age, income, gender, and (for certain cases) a genetical risk score. The solution includes data analysis, model segmentation, and deployment in an interactive web interface.
+An insurance client requested a system that could predict a customer's annual premium based on available input features such as age, income, gender, locality etc. The solution includes data analysis, model segmentation, and deployment in an interactive web interface.
 
 
 
@@ -66,7 +66,7 @@ For the younger segment, an updated dataset was received containing an additiona
 
 - For the **younger group**, Linear Regression was used after including `genetical_risk_score`, yielding a strong R² of ~98%.
 
-- For the **older group**, XGBoost remained the best-performing model.
+- For the **older group**, XGBoost remained the best-performing model. `genetical_risk_score` was set as 0 for this group to maintain consistency.
 
 
 
