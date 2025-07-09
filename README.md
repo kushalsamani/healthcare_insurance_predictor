@@ -1,8 +1,10 @@
 # 🏥 Healthcare Insurance Premium Predictor — ML-Powered Risk-Based Quotation System
 
 
+**Live App:** (https://healthcareinsurancepredictor.streamlit.app/)  
+**Note:** Predicted premium values are displayed in **INR (Indian Rupees)**
 
-This project is a machine learning pipeline and Streamlit web app designed to predict the **annual healthcare insurance premium** for individuals based on demographic and health-related risk factors. The system uses an age-based segmentation approach with two distinct models to improve accuracy and handle data imbalance.
+This project is a machine learning pipeline and Streamlit web app designed to predict the **Annual Healthcare Insurance Premium** for individuals based on demographic and health-related risk factors. The system uses an age-based segmentation approach with two distinct models to improve accuracy and handle data imbalance.
 
 
 
@@ -22,7 +24,7 @@ An insurance client requested a system that could predict a customer's annual pr
 
 
 
-## 🔍 How It Works
+## 🔍 Project Flow
 
 
 
@@ -40,7 +42,7 @@ Several regression models were trained — including Linear Regression, Ridge, L
 
 3. **Error Analysis**  
 
-Residuals were calculated (as the difference between predicted and actual premiums), and percentage error was analyzed. It was found that the majority of large errors (above 10%) were concentrated among individuals aged 25 or below.
+Residuals were calculated (as the difference between predicted and actual premiums), and percentage error was analyzed. It was found that the majority of large errors (above (+/- 10%)) were concentrated among individuals aged 25 or below.
 
 
 
@@ -70,7 +72,7 @@ For the younger segment, an updated dataset was received containing an additiona
 
 7. **Model Saving**  
 
-Both models and their respective scalers were serialized using `joblib` and stored in the `artifacts/` directory.
+Both models and their respective scalers were serialized using `joblib` and stored in the `artifacts` directory.
 
 
 
@@ -134,7 +136,7 @@ streamlit run app/main.py
 
 - This project demonstrates the use of **segmented modeling**, **feature-based enrichment**, and **modular deployment** for real-world ML workflows.
 
-- Deployment to **Streamlit Cloud** is planned following GitHub integration.
+- **This app is deployed and live on:** (https://healthcareinsurancepredictor.streamlit.app/)  
 
 
 
@@ -157,8 +159,6 @@ streamlit run app/main.py
 - `.gitignore` → Clean project setup with ignored caches and temp files
 
 ---
-
-```
 
 
 
