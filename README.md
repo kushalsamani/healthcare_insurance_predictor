@@ -2,7 +2,7 @@
 
 
 
-This project is a machine learning pipeline and Streamlit web app designed to predict the \*\*annual healthcare insurance premium\*\* for individuals based on demographic and health-related risk factors. The system uses an age-based segmentation approach with two distinct models to improve accuracy and handle data imbalance.
+This project is a machine learning pipeline and Streamlit web app designed to predict the **annual healthcare insurance premium** for individuals based on demographic and health-related risk factors. The system uses an age-based segmentation approach with two distinct models to improve accuracy and handle data imbalance.
 
 
 
@@ -48,15 +48,15 @@ Residuals were calculated (as the difference between predicted and actual premiu
 
 The dataset was split into two parts:
 
-- `healthcare\_premium\_young` → individuals aged ≤ 25
+- `healthcare_premium_young` → individuals aged ≤ 25
 
-- `healthcare\_premium\_rest` → individuals aged > 25
+- `healthcare_premium_rest` → individuals aged > 25
 
 
 
 5. **Feature Enrichment**  
 
-For the younger segment, an updated dataset was received containing an additional feature: `genetical\_risk\_score`. This feature was only available for the ≤ 25 group.
+For the younger segment, an updated dataset was received containing an additional feature: `genetical_risk_score`. This feature was only available for the ≤ 25 group.
 
 
 
@@ -155,8 +155,6 @@ streamlit run app/main.py
 - `requirements.txt` → All required libraries for running the app
 
 - `.gitignore` → Clean project setup with ignored caches and temp files
-
-
 
 ---
 
