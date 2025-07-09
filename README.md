@@ -1,4 +1,4 @@
-\# 🏥 Healthcare Insurance Premium Predictor — ML-Powered Risk-Based Quotation System
+# 🏥 Healthcare Insurance Premium Predictor — ML-Powered Risk-Based Quotation System
 
 
 
@@ -10,7 +10,7 @@ This project is a machine learning pipeline and Streamlit web app designed to pr
 
 
 
-\## 💡 What This Project Does
+## 💡 What This Project Does
 
 
 
@@ -22,61 +22,61 @@ An insurance client requested a system that could predict a customer's annual pr
 
 
 
-\## 🔍 How It Works
+## 🔍 How It Works
 
 
 
-1\. \*\*Data Acquisition \& Exploration\*\*  
+1. **Data Acquisition & Exploration**
 
-&nbsp;  The input data was provided in Excel format. It was cleaned, analyzed, and visualized using Python libraries such as pandas, seaborn, and matplotlib.
-
-
-
-2\. \*\*Initial Model Training\*\*  
-
-&nbsp;  Several regression models were trained — including Linear Regression, Ridge, Lasso, and XGBoost. XGBoost initially produced the best R² score.
+The input data was provided in Excel format. It was cleaned, analyzed, and visualized using Python libraries such as pandas, seaborn, and matplotlib.
 
 
 
-3\. \*\*Error Analysis\*\*  
+2. **Initial Model Training**  
 
-&nbsp;  Residuals were calculated (as the difference between predicted and actual premiums), and percentage error was analyzed. It was found that the majority of large errors (above 10%) were concentrated among individuals aged 25 or below.
-
-
-
-4\. \*\*Age-Based Data Segmentation\*\*  
-
-&nbsp;  The dataset was split into two parts:
-
-&nbsp;  - `healthcare\_premium\_young` → individuals aged ≤ 25
-
-&nbsp;  - `healthcare\_premium\_rest` → individuals aged > 25
+Several regression models were trained — including Linear Regression, Ridge, Lasso, and XGBoost. XGBoost initially produced the best R² score.
 
 
 
-5\. \*\*Feature Enrichment\*\*  
+3. **Error Analysis**  
 
-&nbsp;  For the younger segment, an updated dataset was received containing an additional feature: `genetical\_risk\_score`. This feature was only available for the ≤ 25 group.
-
-
-
-6\. \*\*Final Modeling Strategy\*\*  
-
-&nbsp;  - For the \*\*younger group\*\*, Linear Regression was used after including `genetical\_risk\_score`, yielding a strong R² of ~98%.
-
-&nbsp;  - For the \*\*older group\*\*, XGBoost remained the best-performing model.
+Residuals were calculated (as the difference between predicted and actual premiums), and percentage error was analyzed. It was found that the majority of large errors (above 10%) were concentrated among individuals aged 25 or below.
 
 
 
-7\. \*\*Model Saving\*\*  
+4. **Age-Based Data Segmentation**  
 
-&nbsp;  Both models and their respective scalers were serialized using `joblib` and stored in the `artifacts/` directory.
+The dataset was split into two parts:
+
+- `healthcare\_premium\_young` → individuals aged ≤ 25
+
+- `healthcare\_premium\_rest` → individuals aged > 25
 
 
 
-8\. \*\*Interactive Deployment\*\*  
+5. **Feature Enrichment**  
 
-&nbsp;  A Streamlit app was created to serve predictions. Based on the entered age, the appropriate model is selected and used to compute the predicted premium.
+For the younger segment, an updated dataset was received containing an additional feature: `genetical\_risk\_score`. This feature was only available for the ≤ 25 group.
+
+
+
+6. **Final Modeling Strategy**  
+
+- For the **younger group**, Linear Regression was used after including `genetical_risk_score`, yielding a strong R² of ~98%.
+
+- For the **older group**, XGBoost remained the best-performing model.
+
+
+
+7. **Model Saving**  
+
+Both models and their respective scalers were serialized using `joblib` and stored in the `artifacts/` directory.
+
+
+
+8. **Interactive Deployment**  
+
+A Streamlit app was created to serve predictions. Based on the entered age, the appropriate model is selected and used to compute the predicted premium.
 
 
 
@@ -84,7 +84,7 @@ An insurance client requested a system that could predict a customer's annual pr
 
 
 
-\## 🖥️ Try It Yourself
+## 🖥️ Try It Yourself
 
 
 
@@ -92,7 +92,7 @@ To run the app locally:
 
 
 
-1\. \*\*Install dependencies\*\*
+1. **Install dependencies**
 
 
 
@@ -104,7 +104,7 @@ pip install -r requirements.txt
 
 
 
-2\. \*\*Launch the app\*\*
+2. **Launch the app**
 
 
 
@@ -116,7 +116,7 @@ streamlit run app/main.py
 
 
 
-3\. \*\*Input feature values\*\* such as age, income, gender, and genetical risk score (if applicable) to receive a predicted premium value.
+3. **Input feature values** such as age, income, gender, and genetical risk score (if applicable) to receive a predicted premium value.
 
 
 
@@ -124,17 +124,17 @@ streamlit run app/main.py
 
 
 
-\## 🚧 Notes
+## 🚧 Notes
 
 
 
-\- The younger dataset includes an extra feature (`genetical\_risk\_score`) which is not present in the older dataset.
+- The younger dataset includes an extra feature (`genetical_risk_score`) which is not present in the older dataset.
 
-\- A unified schema was ensured by assigning a value of 0 to this feature for the older group.
+- A unified schema was ensured by assigning a value of 0 to this feature for the older group.
 
-\- This project demonstrates the use of \*\*segmented modeling\*\*, \*\*feature-based enrichment\*\*, and \*\*modular deployment\*\* for real-world ML workflows.
+- This project demonstrates the use of **segmented modeling**, **feature-based enrichment**, and **modular deployment** for real-world ML workflows.
 
-\- Deployment to \*\*Streamlit Cloud\*\* is planned following GitHub integration.
+- Deployment to **Streamlit Cloud** is planned following GitHub integration.
 
 
 
@@ -142,19 +142,19 @@ streamlit run app/main.py
 
 
 
-\## 📁 Repo Structure
+## 📁 Repo Structure
 
 
 
-\- `notebooks/` → All data exploration, modeling, and error analysis workflows
+- `notebooks` → All data exploration, modeling, and error analysis workflows
 
-\- `data/` → Original and segmented Excel datasets
+- `data` → Original and segmented Excel datasets
 
-\- `app/` → Streamlit app, helper functions, and model artifacts
+- `app` → Streamlit app, helper functions, and model artifacts
 
-\- `requirements.txt` → All required libraries for running the app
+- `requirements.txt` → All required libraries for running the app
 
-\- `.gitignore` → Clean project setup with ignored caches and temp files
+- `.gitignore` → Clean project setup with ignored caches and temp files
 
 
 
